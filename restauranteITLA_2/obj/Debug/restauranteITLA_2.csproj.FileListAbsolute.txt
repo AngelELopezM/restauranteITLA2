@@ -1,0 +1,13 @@
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\bin\Debug\restauranteITLA_2.exe.config
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\bin\Debug\restauranteITLA_2.exe
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\bin\Debug\restauranteITLA_2.pdb
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.csprojAssemblyReference.cache
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.frm_menu_principal.resources
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.frm_menu_pedidos.resources
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.Properties.Resources.resources
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.csproj.GenerateResource.cache
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.exe
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.pdb
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\bin\Debug\database.dll
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\bin\Debug\database.pdb
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\restauranteITLA_2\obj\Debug\restauranteITLA_2.csproj.CopyComplete

@@ -1,0 +1,5 @@
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\database\bin\Debug\database.dll
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\database\bin\Debug\database.pdb
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\database\obj\Debug\database.csprojAssemblyReference.cache
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\database\obj\Debug\database.dll
+C:\Users\enman\OneDrive\Escritorio\C#\restauranteITLA_2\database\obj\Debug\database.pdb
