@@ -39,12 +39,12 @@
             this.btn_seleccionar_categoria = new System.Windows.Forms.Button();
             this.lb_menu = new System.Windows.Forms.ListBox();
             this.cb_menu = new System.Windows.Forms.ComboBox();
-            this.lb_pedido_clientes = new System.Windows.Forms.ListBox();
             this.bt_cancelar_pedido = new System.Windows.Forms.Button();
+            this.lb_pedido_clientes = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_buscar_cliente = new System.Windows.Forms.Button();
             this.btn_ingresar_pedido = new System.Windows.Forms.Button();
+            this.lbl_pedido = new System.Windows.Forms.Label();
+            this.btn_buscar_cliente = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.gb_numero_personas.SuspendLayout();
@@ -191,16 +191,6 @@
             this.cb_menu.Size = new System.Drawing.Size(265, 24);
             this.cb_menu.TabIndex = 1;
             // 
-            // lb_pedido_clientes
-            // 
-            this.lb_pedido_clientes.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lb_pedido_clientes.FormattingEnabled = true;
-            this.lb_pedido_clientes.ItemHeight = 16;
-            this.lb_pedido_clientes.Location = new System.Drawing.Point(280, 128);
-            this.lb_pedido_clientes.Name = "lb_pedido_clientes";
-            this.lb_pedido_clientes.Size = new System.Drawing.Size(594, 307);
-            this.lb_pedido_clientes.TabIndex = 0;
-            // 
             // bt_cancelar_pedido
             // 
             this.bt_cancelar_pedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -214,13 +204,23 @@
             this.bt_cancelar_pedido.Text = "Cancelar pedido";
             this.bt_cancelar_pedido.UseVisualStyleBackColor = false;
             // 
+            // lb_pedido_clientes
+            // 
+            this.lb_pedido_clientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lb_pedido_clientes.FormattingEnabled = true;
+            this.lb_pedido_clientes.ItemHeight = 16;
+            this.lb_pedido_clientes.Location = new System.Drawing.Point(280, 128);
+            this.lb_pedido_clientes.Name = "lb_pedido_clientes";
+            this.lb_pedido_clientes.Size = new System.Drawing.Size(594, 307);
+            this.lb_pedido_clientes.TabIndex = 0;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Controls.Add(this.btn_ingresar_pedido, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_pedido, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_buscar_cliente, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -232,15 +232,25 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(594, 119);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
-            // label1
+            // btn_ingresar_pedido
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(289, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingrese el nombre del cliente";
+            this.btn_ingresar_pedido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ingresar_pedido.Location = new System.Drawing.Point(300, 62);
+            this.btn_ingresar_pedido.Name = "btn_ingresar_pedido";
+            this.btn_ingresar_pedido.Size = new System.Drawing.Size(291, 54);
+            this.btn_ingresar_pedido.TabIndex = 3;
+            this.btn_ingresar_pedido.Text = "Ingresar pedido";
+            this.btn_ingresar_pedido.UseVisualStyleBackColor = true;
+            // 
+            // lbl_pedido
+            // 
+            this.lbl_pedido.AutoSize = true;
+            this.lbl_pedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pedido.Location = new System.Drawing.Point(3, 0);
+            this.lbl_pedido.Name = "lbl_pedido";
+            this.lbl_pedido.Size = new System.Drawing.Size(289, 25);
+            this.lbl_pedido.TabIndex = 0;
+            this.lbl_pedido.Text = "Ingrese el nombre del cliente";
             // 
             // btn_buscar_cliente
             // 
@@ -251,16 +261,6 @@
             this.btn_buscar_cliente.TabIndex = 1;
             this.btn_buscar_cliente.Text = "Buscar cliente";
             this.btn_buscar_cliente.UseVisualStyleBackColor = true;
-            // 
-            // btn_ingresar_pedido
-            // 
-            this.btn_ingresar_pedido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_ingresar_pedido.Location = new System.Drawing.Point(300, 62);
-            this.btn_ingresar_pedido.Name = "btn_ingresar_pedido";
-            this.btn_ingresar_pedido.Size = new System.Drawing.Size(291, 54);
-            this.btn_ingresar_pedido.TabIndex = 3;
-            this.btn_ingresar_pedido.Text = "Ingresar pedido";
-            this.btn_ingresar_pedido.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -306,7 +306,7 @@
         private System.Windows.Forms.Button bt_cancelar_pedido;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btn_ingresar_pedido;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_pedido;
         private System.Windows.Forms.Button btn_buscar_cliente;
         private System.Windows.Forms.TextBox textBox1;
     }

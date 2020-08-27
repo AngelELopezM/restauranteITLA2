@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace restauranteITLA_2
+namespace database
 {
-    public sealed class repositorio_mesa
+  public sealed  class repositorio_mesa
     {
         public int mesa_en_uso;
 

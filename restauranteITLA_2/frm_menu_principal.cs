@@ -31,7 +31,23 @@ namespace restauranteITLA_2
         #region events
         private void btn_mesa1_Click(object sender, EventArgs e)
         {
-
+            repositorio_mesa.instacia.mesa_en_uso = 1;
+            btn_nueva_orden.Enabled = true;
+        }
+        private void btn_mesa2_Click(object sender, EventArgs e)
+        {
+            repositorio_mesa.instacia.mesa_en_uso = 2;
+            btn_nueva_orden.Enabled = true;
+        }
+        private void btn_mesa3_Click(object sender, EventArgs e)
+        {
+            repositorio_mesa.instacia.mesa_en_uso = 3;
+            btn_nueva_orden.Enabled = true;
+        }
+        private void btn_mesa4_Click(object sender, EventArgs e)
+        {
+            repositorio_mesa.instacia.mesa_en_uso = 4;
+            btn_nueva_orden.Enabled = true;
         }
 
         private void frm_menu_principal_Load(object sender, EventArgs e)
@@ -42,6 +58,13 @@ namespace restauranteITLA_2
         #endregion
 
         #region methos
+
+        private void ordernar()
+        {
+            frm_menu_pedidos pedidos = new frm_menu_pedidos();
+            pedidos.Show();
+            this.Hide();
+        }
         private void estados_mesas()
         {
             switch (data_logic.estado_mesas())
@@ -62,7 +85,14 @@ namespace restauranteITLA_2
                     break;
             }
         }
+
+
+
         #endregion
 
+        private void btn_nueva_orden_Click(object sender, EventArgs e)
+        {
+            ordernar();
+        }
     }
 }

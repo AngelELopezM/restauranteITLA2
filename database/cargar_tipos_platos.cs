@@ -18,6 +18,7 @@ namespace database
         {
             var connectionstring = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
             connection = new SqlConnection(connectionstring);
+                
         }
 
         public List<tipo_plato> GetAll()
@@ -84,11 +85,42 @@ namespace database
             return 0;
         }
 
-        public int insertar_pedido() /*Cuando insertamos un pedido lo que estamoso haciendo es
+        public void insertar_pedido() /*Cuando insertamos un pedido lo que estamoso haciendo es
            solamente agregar un pedido a la mesa*/
         {
-            int mesa = 
-            return 0;
+            orden_persona orden = new orden_persona();
+            int mesa = repositorio_mesa.instacia.mesa_en_uso;
+            connection.Open();
+            SqlCommand command = new SqlCommand("INSERT INTO mesas VALUES (@mesa,@cliente,@entrada "+
+                ",@plato_fuerte,@postre,@bebida)",connection);
+            
+            command.Parameters.AddWithValue("@mesa",mesa);
+            command.Parameters.AddWithValue("@cliente",orden.cliente);
+            command.Parameters.AddWithValue("@entrada",orden.entrada);
+            command.Parameters.AddWithValue("@plato_fuerte",orden.plato_fuerte);
+            command.Parameters.AddWithValue("@postre",orden.postre);
+            command.Parameters.AddWithValue("@bebida",orden.bebida);
+            connection.Close();
+
+            //Me quede aqui insertando los pepidos de los clientes a la base de datos
+        }
+
+        public int revisar_mesa()
+        {
+
+            int mesa = repositorio_mesa.instacia.mesa_en_uso;
+            connection.Open();
+            SqlCommand command2 = new SqlCommand("select count(*) from mesas where id_mesa = @mesa", connection);
+            command2.Parameters.AddWithValue("@mesa",mesa);
+            using (SqlDataReader reader = command2.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    return reader.GetInt32(0);
+                }
+            }
+            connection.Close();
+                return 0;
         }
 
     }

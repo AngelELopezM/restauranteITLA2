@@ -31,6 +31,7 @@ namespace restauranteITLA_2
         {
             Load_combobox();
             lb_pedido_clientes.Items.Add("prueba");
+            lbl_pedido.Text = tipos_platos.revisar_mesa().ToString();
             //Me quede aqui metiendole datos de los clientes
         }
         private void btn_seleccionar_categoria_Click(object sender, EventArgs e)

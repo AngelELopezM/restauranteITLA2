@@ -62,7 +62,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="repositorio_mesa.cs" />
     <EmbeddedResource Include="frm_menu_principal.resx">
       <DependentUpon>frm_menu_principal.cs</DependentUpon>
     </EmbeddedResource>
