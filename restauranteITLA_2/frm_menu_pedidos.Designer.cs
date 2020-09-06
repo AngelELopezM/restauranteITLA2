@@ -45,11 +45,14 @@
             this.btn_ingresar_pedido = new System.Windows.Forms.Button();
             this.lbl_pedido = new System.Windows.Forms.Label();
             this.btn_buscar_cliente = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_cliente = new System.Windows.Forms.TextBox();
+            this.cb_cliente = new System.Windows.Forms.ComboBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1.SuspendLayout();
             this.gb_numero_personas.SuspendLayout();
             this.gb_menu.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -73,7 +76,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(877, 492);
             this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // bt_despachar_orden
             // 
@@ -88,6 +90,7 @@
             this.bt_despachar_orden.TabIndex = 6;
             this.bt_despachar_orden.Text = "Despachar orden";
             this.bt_despachar_orden.UseVisualStyleBackColor = false;
+            this.bt_despachar_orden.Click += new System.EventHandler(this.bt_despachar_orden_Click);
             // 
             // gb_numero_personas
             // 
@@ -113,6 +116,7 @@
             this.rdb_4_persona.TabStop = true;
             this.rdb_4_persona.Text = "4";
             this.rdb_4_persona.UseVisualStyleBackColor = true;
+            this.rdb_4_persona.CheckedChanged += new System.EventHandler(this.rdb_4_persona_CheckedChanged);
             // 
             // rdb_3_persona
             // 
@@ -124,6 +128,7 @@
             this.rdb_3_persona.TabStop = true;
             this.rdb_3_persona.Text = "3";
             this.rdb_3_persona.UseVisualStyleBackColor = true;
+            this.rdb_3_persona.CheckedChanged += new System.EventHandler(this.rdb_3_persona_CheckedChanged);
             // 
             // rdb_2_persona
             // 
@@ -135,6 +140,7 @@
             this.rdb_2_persona.TabStop = true;
             this.rdb_2_persona.Text = "2";
             this.rdb_2_persona.UseVisualStyleBackColor = true;
+            this.rdb_2_persona.CheckedChanged += new System.EventHandler(this.rdb_2_persona_CheckedChanged);
             // 
             // rdb_1_persona
             // 
@@ -146,6 +152,7 @@
             this.rdb_1_persona.TabStop = true;
             this.rdb_1_persona.Text = "1";
             this.rdb_1_persona.UseVisualStyleBackColor = true;
+            this.rdb_1_persona.CheckedChanged += new System.EventHandler(this.rdb_1_persona_CheckedChanged);
             // 
             // gb_menu
             // 
@@ -181,10 +188,12 @@
             this.lb_menu.Name = "lb_menu";
             this.lb_menu.Size = new System.Drawing.Size(265, 180);
             this.lb_menu.TabIndex = 2;
+            this.lb_menu.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lb_menu_MouseDoubleClick);
             // 
             // cb_menu
             // 
             this.cb_menu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cb_menu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_menu.FormattingEnabled = true;
             this.cb_menu.Location = new System.Drawing.Point(3, 18);
             this.cb_menu.Name = "cb_menu";
@@ -203,6 +212,7 @@
             this.bt_cancelar_pedido.TabIndex = 5;
             this.bt_cancelar_pedido.Text = "Cancelar pedido";
             this.bt_cancelar_pedido.UseVisualStyleBackColor = false;
+            this.bt_cancelar_pedido.Click += new System.EventHandler(this.bt_cancelar_pedido_Click);
             // 
             // lb_pedido_clientes
             // 
@@ -213,6 +223,7 @@
             this.lb_pedido_clientes.Name = "lb_pedido_clientes";
             this.lb_pedido_clientes.Size = new System.Drawing.Size(594, 307);
             this.lb_pedido_clientes.TabIndex = 0;
+            this.lb_pedido_clientes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lb_pedido_clientes_MouseDoubleClick);
             // 
             // tableLayoutPanel2
             // 
@@ -222,7 +233,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btn_ingresar_pedido, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lbl_pedido, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_buscar_cliente, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(280, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -235,12 +246,14 @@
             // btn_ingresar_pedido
             // 
             this.btn_ingresar_pedido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ingresar_pedido.Enabled = false;
             this.btn_ingresar_pedido.Location = new System.Drawing.Point(300, 62);
             this.btn_ingresar_pedido.Name = "btn_ingresar_pedido";
             this.btn_ingresar_pedido.Size = new System.Drawing.Size(291, 54);
             this.btn_ingresar_pedido.TabIndex = 3;
             this.btn_ingresar_pedido.Text = "Ingresar pedido";
             this.btn_ingresar_pedido.UseVisualStyleBackColor = true;
+            this.btn_ingresar_pedido.Click += new System.EventHandler(this.btn_ingresar_pedido_Click);
             // 
             // lbl_pedido
             // 
@@ -254,21 +267,50 @@
             // 
             // btn_buscar_cliente
             // 
+            this.btn_buscar_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_buscar_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_buscar_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_buscar_cliente.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_buscar_cliente.Location = new System.Drawing.Point(300, 3);
             this.btn_buscar_cliente.Name = "btn_buscar_cliente";
             this.btn_buscar_cliente.Size = new System.Drawing.Size(291, 53);
             this.btn_buscar_cliente.TabIndex = 1;
             this.btn_buscar_cliente.Text = "Buscar cliente";
-            this.btn_buscar_cliente.UseVisualStyleBackColor = true;
+            this.btn_buscar_cliente.UseVisualStyleBackColor = false;
+            this.btn_buscar_cliente.Click += new System.EventHandler(this.btn_buscar_cliente_Click);
             // 
-            // textBox1
+            // tb_cliente
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox1.Location = new System.Drawing.Point(3, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 22);
-            this.textBox1.TabIndex = 4;
+            this.tb_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_cliente.Location = new System.Drawing.Point(3, 3);
+            this.tb_cliente.Name = "tb_cliente";
+            this.tb_cliente.Size = new System.Drawing.Size(285, 22);
+            this.tb_cliente.TabIndex = 4;
+            // 
+            // cb_cliente
+            // 
+            this.cb_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_cliente.FormattingEnabled = true;
+            this.cb_cliente.Location = new System.Drawing.Point(3, 30);
+            this.cb_cliente.Name = "cb_cliente";
+            this.cb_cliente.Size = new System.Drawing.Size(285, 24);
+            this.cb_cliente.TabIndex = 4;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.cb_cliente, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.tb_cliente, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 62);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(291, 54);
+            this.tableLayoutPanel3.TabIndex = 4;
             // 
             // frm_menu_pedidos
             // 
@@ -285,6 +327,8 @@
             this.gb_menu.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -308,6 +352,8 @@
         private System.Windows.Forms.Button btn_ingresar_pedido;
         private System.Windows.Forms.Label lbl_pedido;
         private System.Windows.Forms.Button btn_buscar_cliente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_cliente;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.ComboBox cb_cliente;
     }
 }

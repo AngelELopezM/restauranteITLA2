@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="cargar_tipos_platos.cs" />
     <Compile Include="Databaseconnetion.cs" />
+    <Compile Include="mesa_ocupada.cs" />
     <Compile Include="orden_persona.cs" />
     <Compile Include="platos_menu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

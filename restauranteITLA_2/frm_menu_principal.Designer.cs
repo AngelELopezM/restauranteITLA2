@@ -12,7 +12,7 @@
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
-        {
+            {
             if (disposing && (components != null))
             {
                 components.Dispose();
@@ -51,7 +51,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 31.27962F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 68.72038F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 174F));
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblestado_mesa, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
@@ -83,16 +83,16 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(621, 390);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(619, 390);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // btn_mesa4
             // 
-            this.btn_mesa4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_mesa4.BackColor = System.Drawing.Color.Green;
             this.btn_mesa4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_mesa4.Location = new System.Drawing.Point(313, 198);
+            this.btn_mesa4.Location = new System.Drawing.Point(312, 198);
             this.btn_mesa4.Name = "btn_mesa4";
-            this.btn_mesa4.Size = new System.Drawing.Size(305, 189);
+            this.btn_mesa4.Size = new System.Drawing.Size(304, 189);
             this.btn_mesa4.TabIndex = 3;
             this.btn_mesa4.Text = "Mesa #4";
             this.btn_mesa4.UseVisualStyleBackColor = false;
@@ -100,11 +100,11 @@
             // 
             // btn_mesa3
             // 
-            this.btn_mesa3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_mesa3.BackColor = System.Drawing.Color.Green;
             this.btn_mesa3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_mesa3.Location = new System.Drawing.Point(3, 198);
             this.btn_mesa3.Name = "btn_mesa3";
-            this.btn_mesa3.Size = new System.Drawing.Size(304, 189);
+            this.btn_mesa3.Size = new System.Drawing.Size(303, 189);
             this.btn_mesa3.TabIndex = 2;
             this.btn_mesa3.Text = "Mesa #3";
             this.btn_mesa3.UseVisualStyleBackColor = false;
@@ -112,11 +112,11 @@
             // 
             // btn_mesa2
             // 
-            this.btn_mesa2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_mesa2.BackColor = System.Drawing.Color.Green;
             this.btn_mesa2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_mesa2.Location = new System.Drawing.Point(313, 3);
+            this.btn_mesa2.Location = new System.Drawing.Point(312, 3);
             this.btn_mesa2.Name = "btn_mesa2";
-            this.btn_mesa2.Size = new System.Drawing.Size(305, 189);
+            this.btn_mesa2.Size = new System.Drawing.Size(304, 189);
             this.btn_mesa2.TabIndex = 1;
             this.btn_mesa2.Text = "Mesa #2";
             this.btn_mesa2.UseVisualStyleBackColor = false;
@@ -124,11 +124,11 @@
             // 
             // btn_mesa1
             // 
-            this.btn_mesa1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_mesa1.BackColor = System.Drawing.Color.Green;
             this.btn_mesa1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_mesa1.Location = new System.Drawing.Point(3, 3);
             this.btn_mesa1.Name = "btn_mesa1";
-            this.btn_mesa1.Size = new System.Drawing.Size(304, 189);
+            this.btn_mesa1.Size = new System.Drawing.Size(303, 189);
             this.btn_mesa1.TabIndex = 0;
             this.btn_mesa1.Text = "Mesa #1";
             this.btn_mesa1.UseVisualStyleBackColor = false;
@@ -141,14 +141,14 @@
             this.lblestado_mesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblestado_mesa.Location = new System.Drawing.Point(3, 411);
             this.lblestado_mesa.Name = "lblestado_mesa";
-            this.lblestado_mesa.Size = new System.Drawing.Size(190, 24);
+            this.lblestado_mesa.Size = new System.Drawing.Size(189, 24);
             this.lblestado_mesa.TabIndex = 2;
             this.lblestado_mesa.Text = "Estado de la mesa";
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox1.Location = new System.Drawing.Point(199, 412);
+            this.textBox1.Location = new System.Drawing.Point(198, 412);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(172, 22);
@@ -162,14 +162,14 @@
             this.tableLayoutPanel3.Controls.Add(this.btn_reanudar_orden, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btn_nueva_orden, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(630, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(628, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(167, 390);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(169, 390);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // btn_limpiar_mesa
@@ -178,10 +178,11 @@
             this.btn_limpiar_mesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_limpiar_mesa.Location = new System.Drawing.Point(3, 265);
             this.btn_limpiar_mesa.Name = "btn_limpiar_mesa";
-            this.btn_limpiar_mesa.Size = new System.Drawing.Size(161, 122);
+            this.btn_limpiar_mesa.Size = new System.Drawing.Size(163, 122);
             this.btn_limpiar_mesa.TabIndex = 2;
             this.btn_limpiar_mesa.Text = "Limpiar mesa";
             this.btn_limpiar_mesa.UseVisualStyleBackColor = true;
+            this.btn_limpiar_mesa.Click += new System.EventHandler(this.btn_limpiar_mesa_Click);
             // 
             // btn_reanudar_orden
             // 
@@ -190,10 +191,11 @@
             this.btn_reanudar_orden.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_reanudar_orden.Location = new System.Drawing.Point(3, 134);
             this.btn_reanudar_orden.Name = "btn_reanudar_orden";
-            this.btn_reanudar_orden.Size = new System.Drawing.Size(161, 125);
+            this.btn_reanudar_orden.Size = new System.Drawing.Size(163, 125);
             this.btn_reanudar_orden.TabIndex = 1;
             this.btn_reanudar_orden.Text = "Reanudar orden";
             this.btn_reanudar_orden.UseVisualStyleBackColor = true;
+            this.btn_reanudar_orden.Click += new System.EventHandler(this.btn_reanudar_orden_Click);
             // 
             // btn_nueva_orden
             // 
@@ -202,7 +204,7 @@
             this.btn_nueva_orden.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_nueva_orden.Location = new System.Drawing.Point(3, 3);
             this.btn_nueva_orden.Name = "btn_nueva_orden";
-            this.btn_nueva_orden.Size = new System.Drawing.Size(161, 125);
+            this.btn_nueva_orden.Size = new System.Drawing.Size(163, 125);
             this.btn_nueva_orden.TabIndex = 0;
             this.btn_nueva_orden.Text = "Nueva orden";
             this.btn_nueva_orden.UseVisualStyleBackColor = true;
@@ -213,9 +215,9 @@
             this.btn_salir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_salir.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_salir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salir.Location = new System.Drawing.Point(630, 399);
+            this.btn_salir.Location = new System.Drawing.Point(628, 399);
             this.btn_salir.Name = "btn_salir";
-            this.btn_salir.Size = new System.Drawing.Size(167, 48);
+            this.btn_salir.Size = new System.Drawing.Size(169, 48);
             this.btn_salir.TabIndex = 5;
             this.btn_salir.Text = "Salir";
             this.btn_salir.UseVisualStyleBackColor = false;

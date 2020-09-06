@@ -9,9 +9,9 @@ namespace database
   public sealed  class repositorio_mesa
     {
         public int mesa_en_uso;
-
-        public static repositorio_mesa instacia { get; } = new repositorio_mesa();
-
+        
+        public static repositorio_mesa instacia { get;} = new repositorio_mesa();
+        
         private repositorio_mesa()
         {
 
