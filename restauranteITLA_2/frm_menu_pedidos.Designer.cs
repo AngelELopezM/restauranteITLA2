@@ -45,9 +45,9 @@
             this.btn_ingresar_pedido = new System.Windows.Forms.Button();
             this.lbl_pedido = new System.Windows.Forms.Label();
             this.btn_buscar_cliente = new System.Windows.Forms.Button();
-            this.tb_cliente = new System.Windows.Forms.TextBox();
-            this.cb_cliente = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.cb_cliente = new System.Windows.Forms.ComboBox();
+            this.tb_cliente = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.gb_numero_personas.SuspendLayout();
             this.gb_menu.SuspendLayout();
@@ -279,24 +279,6 @@
             this.btn_buscar_cliente.UseVisualStyleBackColor = false;
             this.btn_buscar_cliente.Click += new System.EventHandler(this.btn_buscar_cliente_Click);
             // 
-            // tb_cliente
-            // 
-            this.tb_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tb_cliente.Location = new System.Drawing.Point(3, 3);
-            this.tb_cliente.Name = "tb_cliente";
-            this.tb_cliente.Size = new System.Drawing.Size(285, 22);
-            this.tb_cliente.TabIndex = 4;
-            // 
-            // cb_cliente
-            // 
-            this.cb_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cb_cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cb_cliente.FormattingEnabled = true;
-            this.cb_cliente.Location = new System.Drawing.Point(3, 30);
-            this.cb_cliente.Name = "cb_cliente";
-            this.cb_cliente.Size = new System.Drawing.Size(285, 24);
-            this.cb_cliente.TabIndex = 4;
-            // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 1;
@@ -311,6 +293,24 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(291, 54);
             this.tableLayoutPanel3.TabIndex = 4;
+            // 
+            // cb_cliente
+            // 
+            this.cb_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cb_cliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_cliente.FormattingEnabled = true;
+            this.cb_cliente.Location = new System.Drawing.Point(3, 30);
+            this.cb_cliente.Name = "cb_cliente";
+            this.cb_cliente.Size = new System.Drawing.Size(285, 24);
+            this.cb_cliente.TabIndex = 4;
+            // 
+            // tb_cliente
+            // 
+            this.tb_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tb_cliente.Location = new System.Drawing.Point(3, 3);
+            this.tb_cliente.Name = "tb_cliente";
+            this.tb_cliente.Size = new System.Drawing.Size(285, 22);
+            this.tb_cliente.TabIndex = 4;
             // 
             // frm_menu_pedidos
             // 

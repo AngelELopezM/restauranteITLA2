@@ -20,7 +20,7 @@ namespace restauranteITLA_2
             mesa3,
             mesa4
         }
-        public bool ocupada;
+        
         private cargar_tipos_platos data_logic;
         public frm_menu_principal()
         {
@@ -40,7 +40,7 @@ namespace restauranteITLA_2
         }
         private void btn_reanudar_orden_Click(object sender, EventArgs e)
         {
-            mesa_ocupada.instacia.ocupada = 1;//Esto es para que se nos carguen las opciones
+            mesa_ocupada.instacia.ocupada = true;//Esto es para que se nos carguen las opciones
             //de mesa ocupada en el prox formulario
             frm_menu_pedidos pedidos = new frm_menu_pedidos();
             pedidos.Show();

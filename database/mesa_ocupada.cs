@@ -8,7 +8,7 @@ namespace database
 {
    public sealed class mesa_ocupada
     {
-        public int ocupada;
+        public bool ocupada;
 
         public static mesa_ocupada instacia { get; } = new mesa_ocupada();
 

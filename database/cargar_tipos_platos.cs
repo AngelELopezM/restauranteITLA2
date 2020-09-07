@@ -299,5 +299,32 @@ namespace database
 
             }
         }
+        public int numero_clientes()
+        {
+            /*Este es un metodo que vamos a utilizar para verificar cuantos pedidos tiene la mesa
+             de esta manera podremos saber si ya hemos hecho los pedidos correspondientes al numero
+             de clientes*/
+            int mesa = repositorio_mesa.instacia.mesa_en_uso;
+            connection.Open();
+            SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM mesas WHERE id_mesa = @mesa", connection);
+            command.Parameters.AddWithValue("@mesa", mesa);
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+
+                reader.Read();/*Para que las funciones del reader funcionen primero hay que iniciarlo
+                como hice aqui arriba para despues poder utilizarlo*/
+                int pedidos = reader.GetInt32(0);
+                connection.Close();
+
+                return pedidos;
+
+
+
+
+            }
+
+
+            return 0;
+        }
     }
 }

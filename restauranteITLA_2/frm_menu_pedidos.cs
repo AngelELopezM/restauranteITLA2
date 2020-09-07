@@ -31,10 +31,11 @@ namespace restauranteITLA_2
         private void frm_menu_pedidos_Load(object sender, EventArgs e)
         {
 
-            int ocupada = mesa_ocupada.instacia.ocupada;
-            if (ocupada ==1)
+            bool ocupada = mesa_ocupada.instacia.ocupada;
+            if (ocupada==true)
             {
                 tb_cliente.ReadOnly = true;
+                numero_clientes();
             }//Cuando la mesa cargue como ocupada, entonces, el nombre dle cliente,
             //no sera editable
             Load_combobox();
@@ -66,15 +67,15 @@ namespace restauranteITLA_2
         
         private void btn_ingresar_pedido_Click(object sender, EventArgs e)
         {
-           /* bool ocupada = mesa_ocupada.instacia.ocupada;
-            if (ocupada)
+            bool ocupada = mesa_ocupada.instacia.ocupada;
+            if (ocupada==true)
             {
                 editar_pedido();
             }
             else
             {
                 agregar_pedido();
-            }*/
+            }
             
             /*Despues de que agregamos el pedido confirmamos que el numero de pedido
              que tengamos sea igual al numero de cliente, cuando lo sea entonces vamos a poder
@@ -138,7 +139,7 @@ namespace restauranteITLA_2
             /*Aqui buscamos la orden y despues eliminamos esa orden bajo el nombre que buscamos
              de esta manera no se duplican los datos y en vez de hace un update lo que hacemos es
              que jalamos los datos y los volvemos a incertar*/
-            tipos_platos.eliminar_pedido(cb_cliente.Text);
+            
             tb_cliente.Text = cb_cliente.SelectedItem.ToString();
         }
         private void bt_despachar_orden_Click(object sender, EventArgs e)
@@ -280,6 +281,32 @@ namespace restauranteITLA_2
             {
                 MessageBox.Show("Verifique la orden para poder someterla");
             }
+        }
+        private int numero_clientes()
+        {
+            /*Este metodo sirve para que cuando la mesa cargue llena, de manera automatica se seleccione
+             el numero de clientes que tiene la mesa*/
+            int pedidos = tipos_platos.numero_clientes();
+            switch (pedidos)
+            {
+                case 1:
+                    rdb_1_persona.Checked = true;
+                    break;
+                case 2:
+                    rdb_2_persona.Checked = true;
+                    break;
+                case 3:
+                    rdb_3_persona.Checked = true;
+                    break;
+                case 4:
+                    rdb_4_persona.Checked = true;
+                    break;
+
+                default:
+                    break;
+            }
+            
+            return pedidos;
         }
 
         #endregion
